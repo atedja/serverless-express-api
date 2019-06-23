@@ -48,7 +48,7 @@ app.get('/user/:userId', function(req, res) {
   });
 })
 
-app.post("/users", function(req, res) {
+app.post("/user", function(req, res) {
   let { userId, name } = req.body;
   if (typeof userId !== "string" || typeof name !== "string") {
     res.status(400).json({ error: "fields must be string" });
